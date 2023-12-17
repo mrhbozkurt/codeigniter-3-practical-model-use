@@ -4,6 +4,7 @@
 // When you use the model in this way, you solve all Table connections with a single model file.
 
 MODEL:
+
     public function get_all($table = "", $where = [], $order = "id ASC", $limit = null) {
         return $this->db->where($where)->order_by($order)->limit($limit)->get($table)->result();
     }
@@ -36,7 +37,7 @@ MODEL:
 CONTROLLERS
 
  // As seen below, we can perform operations such as "all data", "single data", "add new data", "update data", "delete data" by connecting to only one model. 
-        // It can be used unlimitedly by changing the "table name" in the table connections here.
+ // It can be used unlimitedly by changing the "table name" in the table connections here.
 
         
         // ALL DATA
